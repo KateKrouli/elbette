@@ -27,8 +27,7 @@ body {
   -webkit-text-size-adjust: none;
   margin: 0;
   overflow-x: hidden;
-  padding-top: 60px; /* Adjusted for header height */
-  background: #001325;
+  background: #000;
 }
 
 main {
@@ -83,17 +82,16 @@ p {
 } 
 
 h2 {
-  font-weight: 700;
-  font-size: 3.4vw;
+  font-weight: 900;
+  font-size: 4vw;
   font-style: italic;
   line-height: 125%;
   letter-spacing: -2px;
   color: #FFF;
-  text-transform: uppercase;
   margin: 0;
 
   @media (min-width: 1440px) { 
-    font-size: 48px;
+    font-size: 56px;
   }
 
   @media (max-width: 767px) { 
@@ -107,123 +105,66 @@ h2 {
 }
 
   .btn--main {
-     display: flex;
-        align-items: center;
+        display: flex;
+        align-items: stretch;
         height: 56px;
         width: 100%;
 
         @media (max-width: 767px) { 
           height: 42px;
         }
-
-  .btn {
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 border-radius: 0;
                 height: 56px;
                 gap: 20px;
                 padding: 0 12px;
                 font-size: 20px;
-                background: var(--semantic-brand-500, #14A0FF);
+                background: #008AFF;
                 color: var(--semantic-brand-50);
                 width: 100%;
-
-                @media (max-width: 767px) { 
-                  height: 42px;
-                  font-size: 14px;
-              }
+                width: 240px;
             }
- 
-&:before {
+
+        &:before {
             content: '';
           	display: inline-block;
-            border-bottom: 56px solid var(--semantic-brand-500);
+            border-bottom: 56px solid  #008AFF;
             border-left: 22px solid transparent;
-                margin-right: -1px;
                 transition: all .3s ease;
 
                 @media (max-width: 767px) { 
-                  border-bottom: 42px solid var(--semantic-brand-500);
+                  border-bottom: 42px solid  #008AFF;
               }
 
           }
-&:after {
+        &:after {
             content: '';
           	display: inline-block;
-            border-top: 56px solid var(--semantic-brand-500);
+            border-top: 56px solid  #008AFF;
             border-right: 22px solid transparent;
-                margin-left: -1px;
                 transition: all .3s ease;
 
            @media (max-width: 767px) { 
-                  border-top: 42px solid var(--semantic-brand-500);
+                  border-top: 42px solid  #008AFF;
               }
 
           }
-  .btn .ratio {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: rgba(255, 255, 255, 0.60);
-            font-size: 20px;
-            font-style: italic;
-            font-weight: 500;
-            line-height: 24px;
-
-             @media (max-width: 767px) { 
-              font-size: 14px;
-             }
-
-            img {
-                height: 32px;
-            }
-        }
       }
-.btn--main:hover {
-  .btn {
-     background: var(--semantic-brand-600);
-  }
-
-  &:before {
-    border-bottom: 56px solid var(--semantic-brand-600);
-     @media (max-width: 767px) { 
-                  border-bottom: 42px solid var(--semantic-brand-600);
-              }
-  }
-    &:after {
-    border-top: 56px solid var(--semantic-brand-600);
-     @media (max-width: 767px) { 
-                  border-top: 42px solid var(--semantic-brand-600);
-              }
-  }
-}
 
 @import 'header';
 
-@import 'brand';
 
 @import 'main-block';
 
+@import 'video';
+
 @import 'compare';
 
-@import 'timeline';
-
 @import 'middle-banner';
-
-@import 'predictions';
-
-@import 'players';
-
-@import 'infographics';
-
-@import 'faq';
-
-@import 'subscribe-form';
-
-@import 'articles';
 
 @import 'partners';
 
 @import 'footer';
-
-@import 'leave-popup';
-
-@import 'flip-popup'; 
