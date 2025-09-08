@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    text-align: center;
-    height: 500px;
-    background: url(images/middle-banner.webp) center no-repeat;
-    margin-bottom: 80px;
+    background: url(images/middle-banner-bg.webp) bottom center no-repeat;
+    margin-top: 71px;
+    padding-top: 71px;
+    position: relative;
 
     @media (max-width: 767px) { 
         background-size: contain;
@@ -20,19 +20,103 @@
         h2:not(.middle-banner__title-mobile) {
             display: none;
         }
-
-        .main-timer {
-            width: 100%;
-        }
     }
 
-    &__title-mobile {
-        display: none;
-         @media (max-width: 767px) { 
-            display: flex;
-            text-transform: none;
-            position: relative;
-            top:auto
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 257px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+        z-index: 1;
+    }
+
+    &__left {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    &__right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        z-index: 2;
+    }
+
+    h2 {
+        font-size: 5vw;
+
+         @media (min-width: 1440px) { 
+             font-size: 80px;
          }
     }
+
+&__buttons {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+  &__btn {
+        display: flex;
+        align-items: stretch;
+        height: 56px;
+        width: 100%;
+
+        @media (max-width: 767px) { 
+          height: 42px;
+        }
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0;
+                height: 56px;
+                gap: 20px;
+                padding: 0 12px;
+                font-size: 20px;
+                background: #fff;
+                color: #008AFF;
+                width: 100%;
+                width: 240px;
+            }
+
+        &:before {
+            content: '';
+          	display: inline-block;
+            border-bottom: 56px solid  #fff;
+            border-left: 22px solid transparent;
+                transition: all .3s ease;
+
+                @media (max-width: 767px) { 
+                  border-bottom: 42px solid  #fff;
+              }
+
+          }
+        &:after {
+            content: '';
+          	display: inline-block;
+            border-top: 56px solid  #fff;
+            border-right: 22px solid transparent;
+                transition: all .3s ease;
+
+           @media (max-width: 767px) { 
+                  border-top: 42px solid  #fff;
+              }
+
+          }
+      }
 } 

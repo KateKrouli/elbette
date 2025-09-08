@@ -2267,10 +2267,10 @@ header .header__mobile-btn {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  text-align: center;
-  height: 500px;
-  background: url(images/middle-banner.webp) center no-repeat;
-  margin-bottom: 80px;
+  background: url(images/middle-banner-bg.webp) bottom center no-repeat;
+  margin-top: 71px;
+  padding-top: 71px;
+  position: relative;
 }
 @media (max-width: 767px) {
   .middle-banner {
@@ -2284,19 +2284,97 @@ header .header__mobile-btn {
   .middle-banner h2:not(.middle-banner__title-mobile) {
     display: none;
   }
-  .middle-banner .main-timer {
-    width: 100%;
+}
+.middle-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 257px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  z-index: 1;
+}
+.middle-banner__left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.middle-banner__right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.middle-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  z-index: 2;
+}
+.middle-banner h2 {
+  font-size: 5vw;
+}
+@media (min-width: 1440px) {
+  .middle-banner h2 {
+    font-size: 80px;
   }
 }
-.middle-banner__title-mobile {
-  display: none;
+.middle-banner__buttons {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+.middle-banner__btn {
+  display: flex;
+  align-items: stretch;
+  height: 56px;
+  width: 100%;
 }
 @media (max-width: 767px) {
-  .middle-banner__title-mobile {
-    display: flex;
-    text-transform: none;
-    position: relative;
-    top: auto;
+  .middle-banner__btn {
+    height: 42px;
+  }
+}
+.middle-banner__btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  height: 56px;
+  gap: 20px;
+  padding: 0 12px;
+  font-size: 20px;
+  background: #fff;
+  color: #008AFF;
+  width: 100%;
+  width: 240px;
+}
+.middle-banner__btn:before {
+  content: "";
+  display: inline-block;
+  border-bottom: 56px solid #fff;
+  border-left: 22px solid transparent;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .middle-banner__btn:before {
+    border-bottom: 42px solid #fff;
+  }
+}
+.middle-banner__btn:after {
+  content: "";
+  display: inline-block;
+  border-top: 56px solid #fff;
+  border-right: 22px solid transparent;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .middle-banner__btn:after {
+    border-top: 42px solid #fff;
   }
 }
 
@@ -2315,7 +2393,7 @@ header .header__mobile-btn {
 }
 .partners__container {
   padding: 12px;
-  background: var(--vs, radial-gradient(71.71% 50% at 50% 50%, rgba(20, 160, 255, 0.2) 0%, rgba(20, 160, 255, 0.04) 100%));
+  background: rgba(255, 255, 255, 0.05);
   width: 100%;
   overflow: hidden;
 }
@@ -2363,7 +2441,8 @@ footer .footer {
 }
 footer .footer__text {
   padding: 24px;
-  background: var(--vs, radial-gradient(71.71% 50% at 50% 50%, rgba(20, 160, 255, 0.2) 0%, rgba(20, 160, 255, 0.04) 100%));
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.6);
 }
 @media (max-width: 767px) {
   footer .footer__text {
@@ -2385,7 +2464,7 @@ footer .footer__content {
 }
 footer .footer__copyright {
   padding: 24px;
-  background: var(--vs, radial-gradient(71.71% 50% at 50% 50%, rgba(20, 160, 255, 0.2) 0%, rgba(20, 160, 255, 0.04) 100%));
+  background: rgba(255, 255, 255, 0.05);
   flex: 1;
 }
 @media (max-width: 767px) {
@@ -2402,7 +2481,7 @@ footer .footer__links {
   min-width: 160px;
   gap: 12px;
   padding: 24px;
-  background: var(--vs, radial-gradient(71.71% 50% at 50% 50%, rgba(20, 160, 255, 0.2) 0%, rgba(20, 160, 255, 0.04) 100%));
+  background: rgba(255, 255, 255, 0.05);
 }
 @media (max-width: 767px) {
   footer .footer__links {
@@ -2419,7 +2498,7 @@ footer .footer__links {
     justify-content: center;
     border-radius: 24px;
     padding: 24px;
-    background: var(--vs, radial-gradient(71.71% 50% at 50% 50%, rgba(20, 160, 255, 0.2) 0%, rgba(20, 160, 255, 0.04) 100%));
+    background: rgba(255, 255, 255, 0.05);
     flex: 1;
   }
 }
