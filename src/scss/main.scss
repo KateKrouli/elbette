@@ -28,6 +28,10 @@ body {
   margin: 0;
   overflow-x: hidden;
   background: #000;
+
+   @media (max-width: 767px) { 
+    padding-top: 60px;
+   }
 }
 
 main {
@@ -126,6 +130,10 @@ h2 {
                 color: var(--semantic-brand-50);
                 width: 100%;
                 width: 240px;
+                  @media (max-width: 767px) { 
+                      height: 42px;
+                      font-size: 18px;
+                  }
             }
 
         &:before {
